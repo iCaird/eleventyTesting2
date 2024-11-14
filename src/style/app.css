@@ -41,7 +41,7 @@ div.sidebarRight {
     background-color:#341f16;
     position: absolute;
     right: 0;
-    /* bottom:0; */
+    bottom:0;
     top:0;
     width:10%;
     height:100vh;
@@ -103,6 +103,10 @@ a.navLink:hover::after {
     width: 100%;
     background: brown;
     mix-blend-mode: multiply;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 
