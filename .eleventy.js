@@ -18,7 +18,7 @@ export default (config) => {
     config.addPlugin(EleventyHtmlBasePlugin);
 
     return { 
-        pathPrefix: "/elventyTesting2",
+        pathPrefix: "/eleventyTesting2",
         dir : {
             input: "src",
             out: "_site"
