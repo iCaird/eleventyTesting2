@@ -5,7 +5,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <script type="text/javascript" src="/mathjax-init.js"></script>
-    
+
 
 </script>
 </head>
@@ -18,11 +18,11 @@
         
             <a class="navLink " href="/blog/"> Blog</a> ~
         
+            <a class="navLink " href="/japan/"> Japan</a> ~
+        
             <a class="navLink  active " href="/archives/"> Archive</a> ~
         
             <a class="navLink " href="/sketchesPage/"> Sketches</a> ~
-        
-            <a class="navLink " href="/sketches/spiro/"> Spirograph</a> ~
         
             <a class="navLink " href="/research/"> Research</a> ~
         
@@ -32,28 +32,24 @@
         
         </div>
         <div class="sidebarLeft"></div>
-    <div class="content" >
+        <div class="content" >
         <h2>Post Archives</h2>
 <ui>
     
         <li>
-            <a href="/posts/categorification/">Categorification</a><i>13-11-24</i>
+            <a href="/posts/japan/japanTest2/">Japan Test 2</a> <i>14-11-24</i>
         </li>
     
         <li>
-            <a href="/posts/mathjax-test/">MathJax Test</a><i>11-10-24</i>
+            <a href="/posts/japan/japanTest/">Japan Test</a> <i>14-11-24</i>
         </li>
     
         <li>
-            <a href="/posts/whyarentyouworking/">whyarentyouworking</a><i>07-10-24</i>
+            <a href="/posts/research/categorification/">Categorification</a> <i>13-11-24</i>
         </li>
     
         <li>
-            <a href="/posts/timestamptest/">timestamptest</a><i>07-10-24</i>
-        </li>
-    
-        <li>
-            <a href="/posts/tagtest2/">tagTest2</a><i>07-10-24</i>
+            <a href="/posts/mathjax-test/">MathJax Test</a> <i>11-10-24</i>
         </li>
     
 </ui>
@@ -62,15 +58,29 @@
     Previous
      /
     
-        <a href="/archives/1/">Next</a>
-        
+        Next
+    
 </p>
 
 <p>
-    Page 1 of 4
+    Page 1 of 1
 </p>
 
         </div>
         <div class="sidebarRight"></div>
-</body>
-</html>
+        </body>
+
+
+        <script type="text/javascript">
+    function adjustDivHeight(){
+        console.log(`ADJUSTING HEIGHT TO: ${document.documentElement.scrollHeight}`);
+        const div = document.querySelector(".sidebarLeft");
+        const div2 = document.querySelector(".sidebarRight");
+
+        div.style.height = document.documentElement.scrollHeight + "px";
+        div2.style.height = document.documentElement.scrollHeight + "px";
+    }
+    adjustDivHeight();
+    window.addEventListener('scroll', adjustDivHeight);
+</script>
+        </html>

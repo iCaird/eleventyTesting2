@@ -5,7 +5,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <script type="text/javascript" src="/mathjax-init.js"></script>
-    
+
 
 </script>
 </head>
@@ -18,11 +18,11 @@
         
             <a class="navLink " href="/blog/"> Blog</a> ~
         
+            <a class="navLink " href="/japan/"> Japan</a> ~
+        
             <a class="navLink " href="/archives/"> Archive</a> ~
         
             <a class="navLink " href="/sketchesPage/"> Sketches</a> ~
-        
-            <a class="navLink " href="/sketches/spiro/"> Spirograph</a> ~
         
             <a class="navLink " href="/research/"> Research</a> ~
         
@@ -32,7 +32,7 @@
         
         </div>
         <div class="sidebarLeft"></div>
-    <div class="content" >
+        <div class="content" >
         
 <h2>All tags</h2>
 
@@ -51,144 +51,6 @@
     
         
     
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
-        
-    
-    
-    
-
-    
-        
-    
         
     
     
@@ -221,13 +83,7 @@
     
 
     
-    
-    
-
-    
-    
-    
-
+        
     
         
     
@@ -237,27 +93,13 @@
     
 
     
-        
-    
-        
-    
     
     
 
     
-        
-    
-    
-    
-
-    
-        
-    
     
     
 
-    
-        
     
     
     
@@ -288,12 +130,6 @@
     
     
 
-    
-        
-    
-        
-    
-        
     
     
     
@@ -314,18 +150,30 @@
 
 <a href="/tags/posts">posts</a><br>
 
-<a href="/tags/tagTest">tagTest</a><br>
-
 <a href="/tags/research">research</a><br>
 
-<a href="/tags/p5sketch">p5sketch</a><br>
+<a href="/tags/japan">japan</a><br>
 
 <a href="/tags/sketches">sketches</a><br>
 
 <a href="/tags/spirograph">spirograph</a><br>
-
+ 
 
         </div>
         <div class="sidebarRight"></div>
-</body>
-</html>
+        </body>
+
+
+        <script type="text/javascript">
+    function adjustDivHeight(){
+        console.log(`ADJUSTING HEIGHT TO: ${document.documentElement.scrollHeight}`);
+        const div = document.querySelector(".sidebarLeft");
+        const div2 = document.querySelector(".sidebarRight");
+
+        div.style.height = document.documentElement.scrollHeight + "px";
+        div2.style.height = document.documentElement.scrollHeight + "px";
+    }
+    adjustDivHeight();
+    window.addEventListener('scroll', adjustDivHeight);
+</script>
+        </html>

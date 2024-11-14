@@ -5,7 +5,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <script type="text/javascript" src="/mathjax-init.js"></script>
-    
+
 
 </script>
 </head>
@@ -18,11 +18,11 @@
         
             <a class="navLink " href="/blog/"> Blog</a> ~
         
+            <a class="navLink " href="/japan/"> Japan</a> ~
+        
             <a class="navLink " href="/archives/"> Archive</a> ~
         
             <a class="navLink " href="/sketchesPage/"> Sketches</a> ~
-        
-            <a class="navLink " href="/sketches/spiro/"> Spirograph</a> ~
         
             <a class="navLink " href="/research/"> Research</a> ~
         
@@ -32,7 +32,7 @@
         
         </div>
         <div class="sidebarLeft"></div>
-    <div class="content" >
+        <div class="content" >
         
 <h1> Tagged "posts"</h1>
 
@@ -40,88 +40,38 @@
     
     
         <li>
-            <a href="/posts/beta/">My First Post! BETA</a>
-        </li>
-    
-        <li>
-            <a href="/posts/gamma copy 2/">My First Post! GAMMA</a>
-        </li>
-    
-        <li>
-            <a href="/posts/gamma copy 3/">My First Post! GAMMA</a>
-        </li>
-    
-        <li>
-            <a href="/posts/gamma copy 4/">My First Post! GAMMA</a>
-        </li>
-    
-        <li>
-            <a href="/posts/gamma copy 5/">My First Post! GAMMA</a>
-        </li>
-    
-        <li>
-            <a href="/posts/gamma copy 6/">My First Post! GAMMA</a>
-        </li>
-    
-        <li>
-            <a href="/posts/gamma copy 7/">My First Post! GAMMA</a>
-        </li>
-    
-        <li>
-            <a href="/posts/gamma copy 8/">My First Post! GAMMA</a>
-        </li>
-    
-        <li>
-            <a href="/posts/gamma copy/">My First Post! GAMMA</a>
-        </li>
-    
-        <li>
-            <a href="/posts/gamma/">My First Post! GAMMA</a>
-        </li>
-    
-        <li>
-            <a href="/posts/alpha/">My First Post! ALPHA</a>
-        </li>
-    
-        <li>
-            <a href="/posts/liam/">Liam</a>
-        </li>
-    
-        <li>
-            <a href="/posts/baconipsum/">baconipsum</a>
-        </li>
-    
-        <li>
-            <a href="/posts/newpost/">NEWPOST</a>
-        </li>
-    
-        <li>
-            <a href="/posts/tagtest/">tagTest</a>
-        </li>
-    
-        <li>
-            <a href="/posts/tagtest2/">tagTest2</a>
-        </li>
-    
-        <li>
-            <a href="/posts/timestamptest/">timestamptest</a>
-        </li>
-    
-        <li>
-            <a href="/posts/whyarentyouworking/">whyarentyouworking</a>
-        </li>
-    
-        <li>
             <a href="/posts/mathjax-test/">MathJax Test</a>
         </li>
     
         <li>
-            <a href="/posts/categorification/">Categorification</a>
+            <a href="/posts/research/categorification/">Categorification</a>
+        </li>
+    
+        <li>
+            <a href="/posts/japan/japanTest/">Japan Test</a>
+        </li>
+    
+        <li>
+            <a href="/posts/japan/japanTest2/">Japan Test 2</a>
         </li>
     
 </ul>
 
         </div>
         <div class="sidebarRight"></div>
-</body>
-</html>
+        </body>
+
+
+        <script type="text/javascript">
+    function adjustDivHeight(){
+        console.log(`ADJUSTING HEIGHT TO: ${document.documentElement.scrollHeight}`);
+        const div = document.querySelector(".sidebarLeft");
+        const div2 = document.querySelector(".sidebarRight");
+
+        div.style.height = document.documentElement.scrollHeight + "px";
+        div2.style.height = document.documentElement.scrollHeight + "px";
+    }
+    adjustDivHeight();
+    window.addEventListener('scroll', adjustDivHeight);
+</script>
+        </html>

@@ -5,7 +5,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <script type="text/javascript" src="/mathjax-init.js"></script>
-    
+
 
 </script>
 </head>
@@ -18,11 +18,11 @@
         
             <a class="navLink " href="/blog/"> Blog</a> ~
         
+            <a class="navLink " href="/japan/"> Japan</a> ~
+        
             <a class="navLink " href="/archives/"> Archive</a> ~
         
             <a class="navLink  active " href="/sketchesPage/"> Sketches</a> ~
-        
-            <a class="navLink " href="/sketches/spiro/"> Spirograph</a> ~
         
             <a class="navLink " href="/research/"> Research</a> ~
         
@@ -32,7 +32,7 @@
         
         </div>
         <div class="sidebarLeft"></div>
-    <div class="content" >
+        <div class="content" >
         <h2>TESTING</h2>
 <h2>My p5 Sketches!!</h2>
 
@@ -44,42 +44,6 @@
         
 
     
-        
-
-    
-
-
-    
-        
-
-    
-        
-
-    
-
-
-    
-        
-
-    
-
-
-    
-        
-
-    
-
-
-    
-        
-
-    
-
-
-    
-        
-
-    
 
 
     
@@ -103,21 +67,7 @@
     
 
 
-    
-        
 
-    
-        
-
-    
-        
-
-    
-
-
-
-
-    <a href="/tags/p5sketch/">p5sketch</a>
 
     <a href="/tags/sketches/">sketches</a>
 
@@ -130,8 +80,6 @@
             <a style="font-size: 30" href=" /sketches/spiro/">Spirograph!</a> <i>14-11-24</i>
             <div>
             Tags:
-            
-                <a href="/tags/p5sketch/">~p5sketch~</a>
             
                 <a href="/tags/sketches/">~sketches~</a>
             
@@ -148,86 +96,6 @@
             <div>
             Tags:
             
-                <a href="/tags/p5sketch/">~p5sketch~</a>
-            
-                <a href="/tags/sketches/">~sketches~</a>
-            
-            </div>
-            
-            </li>
-        </div>
-    
-        <div style="padding: 1em">
-        <li>
-            <a style="font-size: 30" href=" /sketches/sketch2 copy/">Moving circles again!!</a> <i>14-11-24</i>
-            <div>
-            Tags:
-            
-                <a href="/tags/sketches/">~sketches~</a>
-            
-            </div>
-            
-            </li>
-        </div>
-    
-        <div style="padding: 1em">
-        <li>
-            <a style="font-size: 30" href=" /sketches/sketch2 copy 6/">Moving circles again!!</a> <i>14-11-24</i>
-            <div>
-            Tags:
-            
-                <a href="/tags/sketches/">~sketches~</a>
-            
-            </div>
-            
-            </li>
-        </div>
-    
-        <div style="padding: 1em">
-        <li>
-            <a style="font-size: 30" href=" /sketches/sketch2 copy 5/">Moving circles again!!</a> <i>14-11-24</i>
-            <div>
-            Tags:
-            
-                <a href="/tags/sketches/">~sketches~</a>
-            
-            </div>
-            
-            </li>
-        </div>
-    
-        <div style="padding: 1em">
-        <li>
-            <a style="font-size: 30" href=" /sketches/sketch2 copy 4/">Moving circles again!!</a> <i>14-11-24</i>
-            <div>
-            Tags:
-            
-                <a href="/tags/sketches/">~sketches~</a>
-            
-            </div>
-            
-            </li>
-        </div>
-    
-        <div style="padding: 1em">
-        <li>
-            <a style="font-size: 30" href=" /sketches/sketch2 copy 3/">Moving circles again!!</a> <i>14-11-24</i>
-            <div>
-            Tags:
-            
-                <a href="/tags/sketches/">~sketches~</a>
-            
-            </div>
-            
-            </li>
-        </div>
-    
-        <div style="padding: 1em">
-        <li>
-            <a style="font-size: 30" href=" /sketches/sketch2 copy 2/">Moving circles again!!</a> <i>14-11-24</i>
-            <div>
-            Tags:
-            
                 <a href="/tags/sketches/">~sketches~</a>
             
             </div>
@@ -241,8 +109,6 @@
             <div>
             Tags:
             
-                <a href="/tags/p5sketch/">~p5sketch~</a>
-            
                 <a href="/tags/sketches/">~sketches~</a>
             
             </div>
@@ -255,8 +121,6 @@
             <a style="font-size: 30" href=" /sketches/R1M3/">R1M3</a> <i>14-11-24</i>
             <div>
             Tags:
-            
-                <a href="/tags/p5sketch/">~p5sketch~</a>
             
                 <a href="/tags/sketches/">~sketches~</a>
             
@@ -283,5 +147,19 @@
 
         </div>
         <div class="sidebarRight"></div>
-</body>
-</html>
+        </body>
+
+
+        <script type="text/javascript">
+    function adjustDivHeight(){
+        console.log(`ADJUSTING HEIGHT TO: ${document.documentElement.scrollHeight}`);
+        const div = document.querySelector(".sidebarLeft");
+        const div2 = document.querySelector(".sidebarRight");
+
+        div.style.height = document.documentElement.scrollHeight + "px";
+        div2.style.height = document.documentElement.scrollHeight + "px";
+    }
+    adjustDivHeight();
+    window.addEventListener('scroll', adjustDivHeight);
+</script>
+        </html>
