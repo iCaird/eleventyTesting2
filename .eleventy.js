@@ -1,8 +1,10 @@
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
-
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 export default (config) => {
+    
+    config.addPlugin(EleventyHtmlBasePlugin);
 
     config.addPassthroughCopy("src/style");
     config.addPassthroughCopy("src/sketches");
@@ -15,7 +17,6 @@ export default (config) => {
 
     config.setLibrary("md", markdownLibrary);
 
-    config.addPlugin(EleventyHtmlBasePlugin);
 
     return { 
         pathPrefix: "/eleventyTesting2",
