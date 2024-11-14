@@ -1,7 +1,12 @@
+
+html { height: 100vh; }
+
 body {
     background-color: rgb(31, 31, 31);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Cascadia Code', 'Courier New', Courier, monospace;
+    font-size: 20;
     margin: 0 0 0 0;
+    height: 100vh;
 }
 
 div.header {
@@ -22,20 +27,24 @@ div.header {
 div.sidebarLeft {
     background-color:#341f16;
     position: absolute;
+    /* float: left; */
     width:10%;
     left: 0;
     bottom:0;
-    height:100%;
+    top: 0;
+    height:100vh;
     z-index: -1;
+    /* overflow:visible; */
 }
 
 div.sidebarRight {
     background-color:#341f16;
     position: absolute;
     right: 0;
-    bottom:0;
+    /* bottom:0; */
+    top:0;
     width:10%;
-    height:100%;
+    height:100vh;
     z-index: -1;
 }
 
@@ -43,7 +52,7 @@ div.content {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #D5CEA3;
     display:flex;
     flex-direction: column;
@@ -102,11 +111,11 @@ a.navLink:hover::after {
 }
 
 p {
-    max-width: 40em;
+    font-size: 20;
+    max-width: 80%;
     word-break: break-word;  /* Ensures long words break */
     hyphens:auto;
     /* overflow-wrap: anywhere; */
-
 }
 
 
@@ -116,12 +125,12 @@ p {
 
 
 ul {
-
-    max-width: 40em;
+    font-size: 20;
+    max-width: 80%;
 }
 
 hr {
-    width: 30em;
+    width: 80%;
     color: #D5CEA3;
 }
 

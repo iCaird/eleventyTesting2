@@ -9,7 +9,7 @@ title: My Research
 
 
 <p>
-    Here's the short version first: <br>
+    Here's the short version first: <br><br>
     Cluster algebras are algebras that exhibit a particular struture that is in 
     some sense very combinatorial. People care about these for various reasons. 
     A Grassmannian is a collection of subspaces of some space that all have the 
@@ -29,3 +29,11 @@ title: My Research
     <li> Categorification</li>
     <li> The category CMC</li>
 </ul>
+
+Posts tagged research in order of creation:
+{% assign posts = collections.research | reverse %}
+{% for post in posts %}
+    <p>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>  <b>{{ post.date | date: "%d-%m-%y" }}</b>
+    </p>
+{% endfor %}

@@ -9,16 +9,16 @@
             "url": "/blog/"
         },
         {
+            "text": "Japan",
+            "url": "/japan/"
+        },
+        {
             "text": "Archive",
             "url": "/archives/"
         },
         {
             "text": "Sketches",
             "url": "/sketchesPage/"
-        },
-        {
-            "text": "Spirograph",
-            "url": "/sketches/spiro/"
         },
         {
             "text": "Research",

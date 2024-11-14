@@ -1,19 +1,26 @@
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import clean from "eleventy-plugin-clean";
 
 export default (config) => {
     
     config.addPlugin(EleventyHtmlBasePlugin);
+    config.addPlugin(clean);
 
     config.addPassthroughCopy("src/style");
     config.addPassthroughCopy("src/sketches");
     config.addPassthroughCopy("src/mathjax-init.js");
 
     const markdownLibrary = markdownIt({ html: true }).use(markdownItAnchor, {
-        permalink: markdownItAnchor.permalink.ariaHidden({}),
+        permalink: false,
         slugify: s => s.toLowerCase().replace(/[^\w]+/g, '-')
     });
+
+    config.addCollection('alphabetical', (collection) => {
+        return collection.sort((a,b) => a.data.title[0] - b.data.title[0]);
+    })
+
 
     config.setLibrary("md", markdownLibrary);
 
