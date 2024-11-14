@@ -19,7 +19,7 @@ export default (config) => {
 
 
     return { 
-        pathPrefix: "/eleventyTesting2/",
+        pathPrefix: "",
         dir : {
             input: "src",
             out: "_site"
