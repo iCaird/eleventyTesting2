@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger deploy on pushes to the main branch
+  # You can also add a manual trigger with workflow_dispatch
+  # workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Run on the latest Ubuntu environment
+
+    steps:
+    # Checkout the code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Set up Node.js (necessary for Eleventy)
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # or your preferred Node.js version
+
+    # Install dependencies
+    - name: Install dependencies
+      run: |
+        npm install
+
+    # Build the Eleventy site
+    - name: Build Eleventy site
+      run: |
+        npx eleventy  # This will generate the _site directory
+
+    # Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}  # Automatically used for GitHub authentication
+        publish_dir: ./_site  # Directory to deploy (your generated site)
