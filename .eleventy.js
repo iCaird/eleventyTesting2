@@ -17,9 +17,6 @@ export default (config) => {
         slugify: s => s.toLowerCase().replace(/[^\w]+/g, '-')
     });
 
-    config.addCollection('alphabetical', (collection) => {
-        return collection.sort((a,b) => a.data.title[0] - b.data.title[0]);
-    })
 
 
     config.setLibrary("md", markdownLibrary);
