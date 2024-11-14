@@ -5,4 +5,5 @@ layout: main
 <h1>{{ title }}</h1>
 <p>{{ author }} {{ date | date: "%d-%m-%y" }}</p>
 
+<p>Last updated on: {{ page.inputPath | gitLastModified | date: "%Y-%m-%d %H:%M:%S" }}</p>
 {{ content }}
