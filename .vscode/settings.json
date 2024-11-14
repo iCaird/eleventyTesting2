@@ -1,0 +1,11 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#5D0C1E",
+        "titleBar.activeBackground": "#82112A",
+        "titleBar.activeForeground": "#FFFBFC"
+    },
+    "[liquid]": {
+        "editor.defaultFormatter": "sissel.shopify-liquid",
+        "editor.formatOnSave": true
+    }
+}

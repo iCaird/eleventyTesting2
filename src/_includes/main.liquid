@@ -1,0 +1,29 @@
+---
+title: Default title
+---
+<html lang="en">
+<head>
+<title>{{ title }}</title>
+<link rel="stylesheet" href="/style/app.css">
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script type="text/javascript" src="/mathjax-init.js"></script>
+    
+
+</script>
+</head>
+<body>
+    <div class="header">
+        ~
+        {% assign curUrl = page.url %}
+        {% for option in nav.options %}
+            <a class="navLink {% if curUrl == option.url %} active {% endif %}" href="{{ option.url }}"> {{ option.text }}</a> ~
+        {% endfor %}
+        </div>
+        <div class="sidebarLeft"></div>
+    <div class="content" >
+        {{ content  }}
+        </div>
+        <div class="sidebarRight"></div>
+</body>
+</html>

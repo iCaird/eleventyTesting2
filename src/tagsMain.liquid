@@ -1,0 +1,18 @@
+---
+    layout: main
+---
+
+<h2>All tags</h2>
+
+{% assign uTags = [] %}
+{% for c in collections.all %}
+    {% for tag in c.data.tags %}
+        {% assign uTags = uTags | push: tag %}
+    {% endfor %}
+    
+    
+{% endfor %}
+{% assign uTags = uTags | uniq  %}
+{% for tag in uTags %}
+<a href="/tags/{{ tag }}">{{ tag }}</a><br>
+{% endfor %}

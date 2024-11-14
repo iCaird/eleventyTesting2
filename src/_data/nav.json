@@ -1,0 +1,36 @@
+{
+    "options": [
+        {
+            "text": "Home",
+            "url": "/"
+        },
+        {
+            "text": "Blog",
+            "url": "/blog/"
+        },
+        {
+            "text": "Archive",
+            "url": "/archives/"
+        },
+        {
+            "text": "Sketches",
+            "url": "/sketchesPage/"
+        },
+        {
+            "text": "Spirograph",
+            "url": "/sketches/spiro/"
+        },
+        {
+            "text": "Research",
+            "url": "/research/"
+        },
+        {
+            "text": "Teaching",
+            "url": "/teaching/"
+        },
+        {
+            "text": "Tags",
+            "url": "/tagsMain/"
+        }
+    ]
+}

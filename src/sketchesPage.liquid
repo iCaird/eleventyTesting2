@@ -1,0 +1,60 @@
+---
+layout: main
+title : p5 Sketches
+pagination:
+    data: collections.sketches
+    size: 20
+    alias: sketches
+    reverse: true
+---
+<h2>TESTING</h2>
+<h2>My p5 Sketches!!</h2>
+
+
+{% assign uniqueTags = [] %}
+{% for sketch in collections.sketches %}
+
+    {% for tag in sketch.data.tags %}
+        {% assign uniqueTags = uniqueTags | push: tag %}
+
+    {% endfor %}
+{% endfor %}
+
+{% assign uniqueTags = uniqueTags | uniq %}
+{% for tag in uniqueTags %}
+    <a href="/tags/{{tag}}/">{{ tag }}</a>
+{% endfor %}
+<ui>
+    {% for sketch in sketches %}
+        <div style="padding: 1em">
+        <li>
+            <a style="font-size: 30" href=" {{ sketch.url }}">{{ sketch.data.title }}</a> <i>{{ sketch.date | date: "%d-%m-%y" }}</i>
+            <div>
+            Tags:
+            {% for tag in sketch.data.tags %}
+                <a href="/tags/{{ tag }}/">~{{ tag }}~</a>
+            {% endfor %}
+            </div>
+            {% comment %} <p>{{ sketch.data.tags |  join: '~'  }} </p> {% endcomment %}
+            </li>
+        </div>
+    {% endfor %}
+</ui>
+
+<p>
+    Page {{ pagination.pageNumber | plus:1 }} of {{ pagination.pages.length }}
+</p>
+
+<p>
+    {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}">Previous</a>
+    {% else %}
+    Previous
+    {% endif %} /
+    {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}">Next</a>
+        {% else %}
+        Next
+    {% endif %}
+</p>
+

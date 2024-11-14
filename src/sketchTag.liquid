@@ -1,0 +1,27 @@
+---
+layout: main
+title: "Your Page Title"
+description: "A brief description of your page"
+pagination:
+    data: collections.sketches
+    size: 5
+    alias: sketch
+---
+
+<h1>{{ page.title }}</h1>
+<p>{{ page.description }}</p>
+
+<ul>
+    {% for sketch in pagination.items %}
+        <li>{{ sketch.title }}</li>
+    {% endfor %}
+</ul>
+
+<div class="pagination">
+    {% if pagination.previousPage %}
+        <a href="{{ pagination.href.previous }}">Previous</a>
+    {% endif %}
+    {% if pagination.nextPage %}
+        <a href="{{ pagination.href.next }}">Next</a>
+    {% endif %}
+</div>
