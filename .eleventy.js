@@ -19,7 +19,7 @@ export default (config) => {
 
 
     return { 
-        pathPrefix: "",
+        pathPrefix: "/",
         dir : {
             input: "src",
             out: "_site"
