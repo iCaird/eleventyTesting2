@@ -1,0 +1,127 @@
+body {
+    background-color: rgb(31, 31, 31);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 0 0 0;
+}
+
+div.header {
+    box-shadow: 0px 0px 10px 0px #000000;
+    background-color: #3C2A21 ;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #d48360;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.sidebarLeft {
+    background-color:#341f16;
+    position: absolute;
+    width:10%;
+    left: 0;
+    bottom:0;
+    height:100%;
+    z-index: -1;
+}
+
+div.sidebarRight {
+    background-color:#341f16;
+    position: absolute;
+    right: 0;
+    bottom:0;
+    width:10%;
+    height:100%;
+    z-index: -1;
+}
+
+div.content {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: bold;
+    color: #D5CEA3;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* box-shadow: 0px 4px 10px 0px #000000; */
+}
+
+a {
+    color: #d48360;
+    text-decoration: none;
+}
+
+a.navLink {
+    color: #d48360 ;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    transition-duration: 0.3s;
+    transition-timing-function:ease-out;
+}
+
+
+a.navLink:hover {
+    color: brown;
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    z-index: 1;
+}
+
+a.navLink::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 100%;
+    background: #d48360;
+    translate: 0 0;
+    transition: height 0.3s ease-in, background-color 0.3s ease-in, translate 0.3s ease-in;
+}
+
+a.navLink.active {
+    color: crimson;
+    /* transform: scale(2); */
+}
+
+a.navLink:hover::after {
+    width: 100%;
+    background: brown;
+    mix-blend-mode: multiply;
+}
+
+
+.sketch-wrapper {
+    display: flex;
+}
+
+p {
+    max-width: 40em;
+    word-break: break-word;  /* Ensures long words break */
+    hyphens:auto;
+    /* overflow-wrap: anywhere; */
+
+}
+
+
+.MathJax {
+    font-weight: bold;
+}
+
+
+ul {
+
+    max-width: 40em;
+}
+
+hr {
+    width: 30em;
+    color: #D5CEA3;
+}
+
