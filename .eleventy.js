@@ -15,7 +15,10 @@ export default (config) => {
 
     config.setLibrary("md", markdownLibrary);
 
+    config.addPlugin(EleventyHtmlBasePlugin);
+
     return { 
+        pathPrefix: "/elventyTesting2",
         dir : {
             input: "src",
             out: "_site"
