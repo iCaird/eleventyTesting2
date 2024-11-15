@@ -45,16 +45,131 @@
 
 <p> I'll be attempting to blog the trip, talking about both the maths I learn
     and the experience of being in Japan for the first time. Posts I make should
-    populate a list below. I'll try add a filter at some point to the list so 
+    populate a list below. <s>I'll try add a filter at some point to the list so 
     you can choose between posts about maths and posts about Okinawa if you so
-    desire.
-</p>
+    desire. </s> </p><p> Okay I've implemented a rudimentary whitelist in that if a post has atleast one of the selected tags then it will appear. I spent way too long doing it so please use it once.</p>
+<div id="japan-tag-filters">
+        
+                <label class="japan-filter-label">
+                        <input type="checkbox" class="japan-filter-checkboxes" value="maths" checked=true>
+                        maths 
+                </label>
+	
+                <label class="japan-filter-label">
+                        <input type="checkbox" class="japan-filter-checkboxes" value="food" checked=true>
+                        food 
+                </label>
+	
+                <label class="japan-filter-label">
+                        <input type="checkbox" class="japan-filter-checkboxes" value="culture" checked=true>
+                        culture 
+                </label>
+	
+                <label class="japan-filter-label">
+                        <input type="checkbox" class="japan-filter-checkboxes" value="testTag" checked=true>
+                        testTag 
+                </label>
+	
 
 
-    <p>
-        <a href="/posts/japan/japanTest/">Japan Test</a>  <b>14-11-24</b>
+</div>
+
+
+        <div class="japan-post-container" data-tags=posts,food,japan>
+                <div style="display:flex; justify-content: center; flex-wrap: wrap">
+        <p class="japan-post-link" >
+        <a href="/posts/japan/japanTest3/">Japan Test 3</a>  <b>15-11-24</b>
+        </p></div>
+    <p class="taglist"> 
+    	
+		    
+	    
+		    
+			    ~food~ 
+		    
+	    
+		    
+	    
     </p>
+    <hr>
+        </div>
 
+        <div class="japan-post-container" data-tags=posts,maths,japan>
+                <div style="display:flex; justify-content: center; flex-wrap: wrap">
+        <p class="japan-post-link" >
+        <a href="/posts/japan/japanTest2/">Japan Test 2</a>  <b>15-11-24</b>
+        </p></div>
+    <p class="taglist"> 
+    	
+		    
+	    
+		    
+			    ~maths~ 
+		    
+	    
+		    
+	    
+    </p>
+    <hr>
+        </div>
+
+        <div class="japan-post-container" data-tags=posts,japan,testTag,maths,food,culture>
+                <div style="display:flex; justify-content: center; flex-wrap: wrap">
+        <p class="japan-post-link" >
+        <a href="/posts/japan/japanTest/">Japan Test</a>  <b>14-11-24</b>
+        </p></div>
+    <p class="taglist"> 
+    	
+		    
+	    
+		    
+	    
+		    
+			    ~testTag~ 
+		    
+	    
+		    
+			    ~maths~ 
+		    
+	    
+		    
+			    ~food~ 
+		    
+	    
+		    
+			    ~culture~ 
+		    
+	    
+    </p>
+    <hr>
+        </div>
+
+
+<script>
+        const tagFilters = document.querySelectorAll(".japan-filter-checkboxes");
+        const posts = document.querySelectorAll(".japan-post-container");
+
+        tagFilters.forEach(filter => {
+                filter.addEventListener('change', () => {
+                        const activeTags = Array.from(tagFilters)
+                                .filter(input => input.checked)
+                                .map(input => input.value);
+                       console.log(activeTags);
+                        posts.forEach( post => {
+                                
+                                const postTags = post.dataset.tags.split(",");
+                                const matches = activeTags.some(tag => postTags.includes(tag));
+                                console.log(postTags);
+                                console.log(matches);
+                                post.style.display = matches ? "" : "none";
+                });
+                });
+        });
+
+
+
+
+</script>
 
 
 
