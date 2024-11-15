@@ -3,7 +3,7 @@ layout: main
 ---
 
 <h1>{{ title }}</h1>
-<p>{{ author }} {{ date | date: "%d-%m-%y" }}</p>
-<p>Last updated on: {{ page.inputPath | gitLastModified | date: "%Y-%m-%d %H:%M:%S" }}</p>
+<p>{{ author }} </p>
+<p>Crated:{{ date | date: "%d-%m-%y" }}Last modified: {{ page.inputPath | gitLastModified | date: "%d-%m-%Y %H:%M:%S" }}</p>
 {{ content }}
 
